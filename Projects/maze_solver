@@ -1,0 +1,126 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <cs50.h>
+
+#define COLS 20
+
+bool cells_visited[20][20] = {false};
+bool path_finder (int x, int y, char destination, char maze[][COLS]);
+
+int main(void)
+{
+    char maze[20][COLS];
+
+for (int i = 0; i < 20; i++)
+{
+    for (int j = 0; j < 20; j++)
+    {
+        maze[i][j] = '#';
+    }
+}
+    int x = 1;
+int y = 1;
+
+maze[x][y] = 'S';
+
+while (x < 18 || y < 18)
+{
+    if (x < 18 && y < 18)
+    {
+        if ((x + y) % 2 == 0)
+        {
+            x++;
+        }
+        else
+        {
+            y++;
+        }
+    }
+    else if (x < 18)
+    {
+        x++;
+    }
+    else
+    {
+        y++;
+    }
+
+    maze[x][y] = ' ';
+}
+
+maze[18][18] = 'E';
+    for (int i = 1; i < 19; i++)
+{
+    for (int j = 1; j < 19; j++)
+    {
+        int r = (i * 17 + j * 31) % 7;
+
+        if (r == 0 && maze[i][j] == '#')
+        {
+            maze[i][j] = ' ';
+        }
+    }
+}
+    char desti = 'E';
+    if (path_finder (1, 1, desti, maze))
+    {
+    for (int i = 0; i < 20; i++)
+{
+    for (int j = 0; j < 20; j++)
+    {
+        printf("%c", maze[i][j]);
+    }
+    printf("\n");
+}
+    }
+
+}
+
+bool path_finder (int x, int y, char destination, char maze[][COLS])
+{
+    //1. If out of bounds → stop
+    if (x >= 20 || x < 0 || y >= 20 || y < 0)
+    {
+        return false;
+    }
+//2. If wall → stop
+    if(maze[x][y] == '#')
+    {
+        return false;
+    }
+//3. If visited → stop
+    if (maze[x][y] == '.')
+    {
+        return false;
+    }
+    if (maze[x][y] == destination)
+    {
+        return true;
+    }
+//4. mark visited
+    char temp = maze[x][y];
+    maze[x][y] = '.';
+//5. if destination → success
+
+//6. try all 4 directions
+    int dx[4] = {0, 0, 1, -1};
+    int dy[4] = {-1, 1, 0, 0};
+    for (int i = 0; i < 4; i++)
+    {
+        int nx = x + dx[i];
+        int ny = y + dy[i];
+        if (path_finder(nx, ny, destination, maze))
+        {
+            maze[x][y] = '*';
+            return true;
+        }
+    }
+  // if any returns true → success
+
+//7. if success:
+     // mark this cell '*'
+      //return true
+      maze[x][y] = temp;
+      return false;
+//8. else return false
+}
