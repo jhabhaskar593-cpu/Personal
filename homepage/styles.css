@@ -1,0 +1,507 @@
+#body
+{
+    margin: 0;
+    padding: 0;
+    background-image: radial-gradient(circle at 80% 250px, #5D1327, #000);
+}
+
+.nav-bar
+{
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+}
+
+#center-panel
+{
+    width : 100%;
+    height : 500px;
+    background-color: transparent;
+}
+
+#projects
+{
+    width : 100%;
+    height : auto;
+    min-height: 300px;
+    background-color : transparent;
+}
+
+#ending
+{
+    height: auto;
+    padding: 10px;
+}
+
+#left-para
+{
+    background-color : #101824;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+#right-links
+{
+    margin: 10px;
+    padding: 10px;
+    background-color : #101824;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.links
+{
+    text-align: center;
+}
+
+footer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+}
+
+.nav-bar a
+{
+    color: red;
+}
+
+.nav-bar .always
+{
+    color: #5D1347;
+}
+
+.nav-bar a:hover, .nav-bar a:focus
+{
+    color: #5D1347;
+}
+
+#body .navbar-toggler:focus
+{
+    color: #5D1347;
+    background-color: #5D1347;
+}
+
+#center-panel .col-md-4
+{
+    display: grid;
+    place-items: center;
+}
+
+#center-panel .col-md-4 img
+{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+#center-panel .col-md-8
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#center-panel .col-md-8 p
+{
+    font-size: clamp(50px, 7vw, 150px);
+    color: #910B00;
+    margin-bottom: 0;
+}
+
+#center-panel .col-md-8 h6
+{
+    color: #61130B;
+}
+
+#projects .card
+{
+    height: auto;
+    max-height:
+    width: 90%;
+    background-color: #171717;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+#projects span
+{
+    text-align: center;
+}
+
+#projects a
+{
+    text-decoration: none;
+}
+
+#projects h1
+{
+    margin: 0;
+}
+
+#projects p
+{
+    font-size: clamp(10px, 3vw, 18px);
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+#projects:has(.card:hover) .card:not(:hover)
+{
+    transform: scale(0.7);
+}
+
+#projects .card:hover
+{
+    transform: scale(1.3);
+}
+
+#left-para h1
+{
+    color: #DA4F30;
+    text-align: center;
+}
+
+#left-para p
+{
+    color: #910B00;
+    font-size: 18px;
+}
+
+#right-links h1
+{
+    color: #EAB974;
+    text-align: center;
+}
+
+.links li
+{
+    display: inline;
+    padding: 3px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.links a
+{
+    text-decoration: none;
+}
+
+.links ul
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links img
+{
+    width: 30px;
+    height: 30px;
+}
+
+.links .git
+{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.links .gmail
+{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+#goal-page .navbar
+{
+    background-color: #FFCED8;
+}
+
+#goal-page #Goals-intro
+{
+    display: grid;
+    place-items: center;
+    height: 30vh;
+    background-color: #FFDDDD;
+}
+
+#Goals-intro h1
+{
+    color: #021A54;
+    font-size: 10vw;
+}
+
+#goals-list h3
+{
+    padding: 0;
+    margin: 0;
+}
+
+#goal-page
+{
+    background-color: #FFE8C4;
+}
+
+.rest .card
+{
+    padding: 10px;
+    border: none;
+    background-color: #FFF4DE;
+    border: 2px solid #021A54;
+}
+
+.rest h3
+{
+    color: #021A54;
+}
+
+#Addy .alert
+{
+    display: none; !important
+}
+
+#shows #Announcer
+{
+    display: grid;
+    place-items: center;
+    height: 200px;
+    text-align: center;
+}
+
+#shows h1
+{
+    color: #6BA3BE;
+}
+
+#Add .btn
+{
+    width: 100%;
+    min-width: 10rem;
+}
+
+#shows
+{
+    position: relative;
+    display: grid;
+    background-color: #181A2F;
+}
+
+#shows nav a
+{
+    color: #0A7075;
+}
+
+#shows .navbar-toggler
+{
+    border-none;
+    background-color: #0C969C;
+    border-radius: 10px;
+}
+
+#shows .p-2
+{
+    background-color: #242E49;
+}
+
+#Shows-cards .col-4
+{
+    display: block;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+#Shows-cards .col-4:hover
+{
+    z-index: 4;
+}
+
+#Shows-cards:has(.col-4:hover) .col-4:not(:hover)
+{
+    transform: scale(0.8)
+}
+
+#Shows-cards .card
+{
+    width: 100%;
+    height: 100%;
+}
+
+#Shows-cards .card img
+{
+    widht: 100%;
+    height: 100%;
+}
+
+#Shows-cards .active
+{
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.active .text-center
+{
+    position: relative;
+    top: 100%;
+    transform: translate(0, -100%);
+    margin: 0;
+    color: white;
+}
+
+#Adding
+{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background-color: #101824;
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    height: auto;
+    width: auto;
+    margin: auto;
+}
+
+#Adding form
+{
+    padding: 10px;
+}
+
+#Adding button
+{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#overlay
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+}
+
+#syllabus .add
+{
+    background-color: #38415C;
+    height: auto;
+    padding: 15px;
+}
+
+.add input
+{
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#syllabus
+{
+    position: relative;
+    height: 100vh;
+    background-color: #181A2F;
+}
+
+#syllabus nav
+{
+    background-color: #38415C;
+}
+
+#syllabus .row
+{
+    height: auto;
+    padding: 10px;
+}
+
+#syllabus .col
+{
+    height:auto;
+    padding: 10px;
+}
+
+#syllabus .added
+{
+    height: auto;
+    widht: 100%;
+}
+
+#bar
+{
+    height: 1em;
+    width: 80%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.percent
+{
+    height: 100%;
+    background-color: #F2BB46;
+    border-radius: 10px;
+}
+
+#total-completion
+{
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: sticky;
+    bottom: 0%;
+    left: 0%;
+}
+
+.large
+{
+    height: 10em;
+}
+
+#syllabus #placer
+{
+    height: 10em;
+    width: 100vw;
+}
+
+#syllabus .sub
+{
+    padding: 10px;
+    color: #FDA481;
+}
+
+#syllabus .card
+{
+    background-color: #54162B;
+}
+
+#syllabus h4
+{
+    color: #B4182D;
+}
+
+#syllabus .completed
+{
+    color: #F2BB46;
+}
